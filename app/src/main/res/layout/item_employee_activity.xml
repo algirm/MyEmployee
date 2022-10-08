@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardElevation="3dp"
+    android:layout_marginHorizontal="4dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/background_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="#edeff2">
+
+            <RelativeLayout
+                android:id="@+id/rightContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:paddingBottom="7dp"
+                    android:id="@+id/drop_arrow"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_toEndOf="@id/status"
+                    android:contentDescription="" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@id/leftContainer"
+                android:id="@+id/tujuan_container"
+                android:layout_marginEnd="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_act_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="2022-10-10"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/leftContainer"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/rightContainer">
+
+                <TextView
+                    android:id="@+id/tv_activity_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Activity Name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/tv_activity_name">
+
+                    <TextView
+                        android:id="@+id/text_hal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="Department:"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_department"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="aaa"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_expand_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/container_text_bawah"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_time_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="00:00"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/text_strip"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:text="-"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time_out"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:text="00:00"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_remark"
+                    android:layout_below="@id/container_text_bawah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/category"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_marginStart="4dp"
+                        android:id="@+id/tanggal_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_below="@id/container_remark"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/tv_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:text="Menjaga keamanan dan ketertiban lingkungan merupakan tanggung jawab bersama sebagai warga negara. Salah satu bagian terpenting dalam penjagaan keamanan dan ketertiban lingkungan adalah peran serta dari masyarakat. Dalam hal ini bentuk partisipasi masyarakat untuk menjaga lingkungan diwujudkan dalam bentuk sistem keamanan dan ketertiban lingkungan, salah satu upaya masyarakat dalam menjaga keamanan dan ketertiban lingkungan sekitarnya adalah dengan melakukan kegiatan ronda atau siskamling. Sementara itu, perkembangan teknologi yang begitu pesat memaksa kita untuk mengikuti perkembangan teknologi tersebut, terutama dalam dunia teknologi informasi dan komunikasi. Teknologi memegang peran penting di era modern seperti pada sekarang ini, salah satu teknologi yang berkembang sekarang ini adalah Augmented Reality (AR). AR adalah sebuah teknologi yang menggabungkan benda maya baik 2D maupun 3D kedalam lingkungan nyata lalu memproyeksikan benda-benda maya tersebut dalam waktu yang nyata. Pemanfaatan AR dilakukan dengan mengimplementasikannya pada sebuah sistem dengan tujuan menggabungkan objek maya dengan objek nyata. Berdasarkan hasil wawancara kepada ketua keamanan yang bersangkutan ditemukan bahwa petugas merasa tidak mudah untuk saling berkoordinasi apalagi hanya dengan alat komunikasi Handy Talky (HT), koordinasi antara petugas cukup rumit karena petugas lain dan koordinator lapangan tidak dapat memantau secara visual jika hanya meggunakan HT. Dengan adanya permasalahan tersebut, penelitian ini melakukan implementasi Augmented Reality Location Based dengan menggunakan Navigation Coordinate System yang merupakan sistem koordinat yang dipetakan dari titik GPS yang kemudian akan diproyeksikan menjadi titik koordinat pada tampilan kamera layar smartphone. Dengan mengimplementasikan Augmented Reality Location Based ini pada sebuah sistem aplikasi dengan platform Android, maka petugas Siskamling dapat memantau petugas lain secara visual pada layar smartphone nya. Pada penelitian ini juga dilakukan pengujian usabilitas dengan menggunakan metode System Usability Scale, dengan hasil nilai rata-rata sebesar 77,25 yang dapat menunjukan aplikasi Augmented Reality mudah untuk digunakan oleh petugas Siskamling."
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_below="@id/tv_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_deadline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Deadline:"
+                        android:textStyle="italic"
+                        android:paddingHorizontal="4dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_deadline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingHorizontal="4dp"
+                        android:text="2022-10-10"
+                        android:textStyle="italic"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
