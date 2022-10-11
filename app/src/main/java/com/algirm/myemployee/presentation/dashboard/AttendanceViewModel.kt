@@ -11,6 +11,7 @@ import com.algirm.myemployee.domain.model.Attendance
 import com.algirm.myemployee.domain.use_case.get_attendances.GetAttendancesUseCase
 import com.algirm.myemployee.domain.use_case.insert_attendance.InsertAttendanceUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -56,7 +57,8 @@ class AttendanceViewModel @Inject constructor(
                     }
                     is Resource.Error -> {}
                 }
-            }
+            }.launchIn(this)
+//            }.launchIn(viewModelScope)
         }
     }
 
